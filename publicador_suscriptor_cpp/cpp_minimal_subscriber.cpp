@@ -57,8 +57,8 @@ public:
     /**
      * @brief Esta función se ejecuta cada vez que se escriba un mensaje en el tópico.
      *
-     * Esta es la función de callback del suscriptor. Publica un
-     * mensaje del tipo String cada vez que se recibe un mensaje del tópico.
+     * Esta función se ejecuta cada vez que se recibe un mensaje
+     * y muestra su contenido en la terminal.
      *
      * @param msg: El mensaje string recibido en el tópico
      * @return void
