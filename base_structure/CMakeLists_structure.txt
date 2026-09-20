@@ -1,0 +1,40 @@
+cmake_minimum_required(VERSION 3.8)  # Versión mínima de CMake requerida
+project(mi_paquete_cpp)              # Nombre del paquete/proyecto
+
+
+# Si usas GCC o Clang, activa advertencias útiles de compilación
+if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
+  add_compile_options(-Wall -Wextra -Wpedantic)
+endif()
+
+
+# Busca el sistema de compilación de ROS 2
+find_package(ament_cmake REQUIRED)
+
+# Busca la biblioteca cliente de ROS 2 para C++
+find_package(rclcpp REQUIRED)
+
+# Busca el paquete std_msgs, porque usaremos mensajes tipo String
+find_package(std_msgs REQUIRED)
+
+
+# Crea un ejecutable a partir del archivo fuente indicado
+add_executable(mi_nodo src/mi_nodo.cpp)
+
+# Declara las dependencias ROS 2 de ese ejecutable
+ament_target_dependencies(
+  mi_nodo
+  rclcpp
+  std_msgs
+)
+
+
+# Instala el ejecutable para que ROS 2 pueda encontrarlo con ros2 run
+install(TARGETS
+  mi_nodo
+  DESTINATION lib/${PROJECT_NAME}
+)
+
+
+# Marca el paquete como paquete válido de ament
+ament_package()

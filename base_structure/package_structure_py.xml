@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<package format="3">
+
+  <!-- Nombre del paquete -->
+  <name>mi_paquete_python</name>
+
+  <!-- Versión del paquete -->
+  <version>0.0.0</version>
+
+  <!-- Descripción del paquete -->
+  <description>Paquete ROS 2 de ejemplo en Python.</description>
+
+  <!-- Información del mantenedor -->
+  <maintainer email="tu_correo@ejemplo.com">
+    Tu Nombre
+  </maintainer>
+
+  <!-- Licencia del paquete -->
+  <license>Apache-2.0</license>
+
+
+  <!-- Herramienta utilizada para construir paquetes Python en ROS 2 -->
+  <buildtool_depend>ament_python</buildtool_depend>
+
+
+  <!-- Biblioteca cliente de ROS 2 para Python -->
+  <depend>rclpy</depend>
+
+  <!-- Mensajes estándar utilizados por el nodo -->
+  <depend>std_msgs</depend>
+
+
+  <!-- Dependencias utilizadas para pruebas -->
+  <test_depend>ament_copyright</test_depend>
+  <test_depend>ament_flake8</test_depend>
+  <test_depend>ament_pep257</test_depend>
+  <test_depend>python3-pytest</test_depend>
+
+
+  <!-- Indica que este paquete utiliza ament_python -->
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+
+</package>

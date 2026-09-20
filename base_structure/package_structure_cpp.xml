@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<package format="3">
+  
+  <!-- Nombre del paquete -->
+  <name>mi_paquete_cpp</name>
+
+  <!-- Versión del paquete -->
+  <version>0.0.0</version>
+
+  <!-- Descripción breve del paquete -->
+  <description>Paquete ROS 2 de ejemplo en C++.</description>
+
+  <!-- Información del mantenedor -->
+  <maintainer email="tu_correo@ejemplo.com">Tu Nombre</maintainer>
+
+  <!-- Tipo de licencia del paquete -->
+  <license>Apache-2.0</license>
+
+
+  <!-- Herramienta de compilación: ament_cmake -->
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+
+  <!-- Dependencias necesarias para compilar -->
+  <depend>rclcpp</depend>
+  <depend>std_msgs</depend>
+
+
+  <!-- Exporta el tipo de compilación del paquete -->
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+
+</package>
